@@ -80,3 +80,9 @@ Cypress.Commands.add("vistaHistoria", () => {
   const link = cy.get(`[href="historia.php?c="]`)
   link.click()
 })
+
+Cypress.Commands.add("ofertaAcademica", () => {
+  cy.visitHome()
+  const ofertaAcademica = cy.get(`div#link3 [href="oferta/"]`)
+  ofertaAcademica.click()
+})
