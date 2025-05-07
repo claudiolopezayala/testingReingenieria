@@ -1,4 +1,4 @@
-describe("TC012",()=>{
+describe("TC055",()=>{
   it("passes",()=>{
     cy.vistCertificacion()
   })

@@ -1,4 +1,4 @@
-describe("TC014",()=>{
+describe("TC057",()=>{
   it("passes",()=>{
     cy.vistCertificacion()
     const link = cy.get(`[href="#panel-5"]`)
