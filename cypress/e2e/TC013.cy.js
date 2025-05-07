@@ -1,6 +1,6 @@
 describe("TC013",()=>{
   it("passes",()=>{
-    cy.vistCurso()
+    cy.vistCertificacion()
     const link = cy.get(`[href="#panel-3"]`)
     link.click()
   })

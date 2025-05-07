@@ -55,7 +55,7 @@ Cypress.Commands.add("visitEC",()=>{
   EC.click()
 })
 
-Cypress.Commands.add("vistCurso",()=>{
+Cypress.Commands.add("vistCertificacion",()=>{
   cy.visitEC()
   const link = cy.get(`[href="oferta9.php?n=9&p=1270"`)
   link.click()
