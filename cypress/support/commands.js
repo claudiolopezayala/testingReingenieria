@@ -47,7 +47,7 @@ Cypress.Commands.add("visitLinks2",(url)=>{
 })
 
 Cypress.Commands.add("visitEC",()=>{
-  const link = cy.get(`div#links3 [href="${url}"]`)
-  const link = cy.get(`[href="ec.php"]`)
-  link.click()
+  // const link = cy.get(`div#links3 [href="${url}"]`)
+  // const link = cy.get(`[href="ec.php"]`)
+  // link.click()
 })
