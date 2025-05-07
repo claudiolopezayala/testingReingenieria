@@ -47,7 +47,16 @@ Cypress.Commands.add("visitLinks2",(url)=>{
 })
 
 Cypress.Commands.add("visitEC",()=>{
-  // const link = cy.get(`div#links3 [href="${url}"]`)
-  // const link = cy.get(`[href="ec.php"]`)
-  // link.click()
+  cy.visitHome()
+  const ofertaAcademica = cy.get(`div#link3 [href="oferta/"]`)
+  ofertaAcademica.click()
+
+  const EC = cy.get(`[href="ec.php"]`)
+  EC.click()
+})
+
+Cypress.Commands.add("vistCurso",()=>{
+  cy.visitEC()
+  const link = cy.get(`[href="oferta9.php?n=9&p=1270"`)
+  link.click()
 })
