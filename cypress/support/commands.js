@@ -34,6 +34,8 @@ Cypress.Commands.add("visitMainLinks",(url)=>{
   link.click()
 })
 
+
+
 Cypress.Commands.add("visitLinks4",(url)=>{
   cy.visitHome()
   const link = cy.get(`div#links4 [href="${url}"]`)
