@@ -74,3 +74,9 @@ Cypress.Commands.add("vistaDirectorio", () => {
   const link = cy.get(`div.links a[href="somos/directorio.php"]`)
   link.click()
 })
+
+Cypress.Commands.add("vistaHistoria", () => {
+  cy.vistaDirectorio()
+  const link = cy.get(`[href="historia.php?c="]`)
+  link.click()
+})
