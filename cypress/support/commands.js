@@ -24,11 +24,11 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("visitHome",()=>{
+Cypress.Commands.add("visitHome", () => {
   cy.visit('https://www.lasallebajio.edu.mx')
 })
 
-Cypress.Commands.add("visitMainLinks",(url)=>{
+Cypress.Commands.add("visitMainLinks", (url) => {
   cy.visitHome()
   const link = cy.get(`div#main_links ul li a[href="${url}"]`)
   link.click()
@@ -36,19 +36,19 @@ Cypress.Commands.add("visitMainLinks",(url)=>{
 
 
 
-Cypress.Commands.add("visitLinks4",(url)=>{
+Cypress.Commands.add("visitLinks4", (url) => {
   cy.visitHome()
   const link = cy.get(`div#links4 [href="${url}"]`)
   link.click()
 })
 
-Cypress.Commands.add("visitLinks2",(url)=>{
+Cypress.Commands.add("visitLinks2", (url) => {
   cy.visitHome()
   const link = cy.get(`div#links2 [href="${url}"]`)
   link.click()
 })
 
-Cypress.Commands.add("visitEC",()=>{
+Cypress.Commands.add("visitEC", () => {
   cy.visitHome()
   const ofertaAcademica = cy.get(`div#link3 [href="oferta/"]`)
   ofertaAcademica.click()
@@ -57,14 +57,20 @@ Cypress.Commands.add("visitEC",()=>{
   EC.click()
 })
 
-Cypress.Commands.add("vistCertificacion",()=>{
+Cypress.Commands.add("vistCertificacion", () => {
   cy.visitEC()
   const link = cy.get(`[href="oferta9.php?n=9&p=1270"`)
   link.click()
 })
 
-Cypress.Commands.add("vistCurso",()=>{
+Cypress.Commands.add("vistCurso", () => {
   cy.visitEC()
   const link = cy.get(`[href="oferta9.php?n=9&p=1077"`)
+  link.click()
+})
+
+Cypress.Commands.add("vistaDirectorio", () => {
+  cy.visitHome()
+  const link = cy.get(`div.links a[href="somos/directorio.php"]`)
   link.click()
 })
