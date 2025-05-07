@@ -1,7 +1,7 @@
-describe("TC28", () => {
+describe("TC34", () => {
     it("passes", () => {
         cy.ofertaAcademica()
-        const link = cy.get(`[href="licenciaturas.php"]`)
+        const link = cy.get(`[href="area1.php"]`)
         link.click()
     })
 })
