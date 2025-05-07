@@ -105,3 +105,15 @@ Cypress.Commands.add("visitMaestrias", () => {
   const link = cy.get(`[href="maestrias.php"]`)
   link.click()
 })
+    
+Cypress.Commands.add("visitEspecialidades", () => {
+  cy.ofertaAcademica()
+  const link = cy.get(`[href="especialidades.php"]`)
+  link.click()
+})
+    
+Cypress.Commands.add("visitOneEspecialidad", () => {
+  cy.visitEspecialidades()
+  const link = cy.get(`[href="oferta5.php?n=5&p=2"]`)
+  link.click()
+})
