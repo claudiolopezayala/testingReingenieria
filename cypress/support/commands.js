@@ -99,3 +99,9 @@ Cypress.Commands.add("actuaria", () => {
   link.click()
 })
 
+    
+Cypress.Commands.add("visitMaestrias", () => {
+  cy.ofertaAcademica()
+  const link = cy.get(`[href="maestrias.php"]`)
+  link.click()
+})
