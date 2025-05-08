@@ -34,8 +34,6 @@ Cypress.Commands.add("visitMainLinks", (url) => {
   link.click()
 })
 
-
-
 Cypress.Commands.add("visitLinks4", (url) => {
   cy.visitHome()
   const link = cy.get(`div#links4 [href="${url}"]`)
@@ -119,9 +117,22 @@ Cypress.Commands.add("visitOneEspecialidad", () => {
   link.click()
 })
 
+
 Cypress.Commands.add("secundaria", () => {
   cy.visitHome()
   cy.ofertaAcademica()
   const secundaria = cy.get(`[href="oferta2.php"]`)
   secundaria.click()
+})
+
+Cypress.Commands.add("visitDoctorados", () => {
+  cy.ofertaAcademica()
+  const link = cy.get(`[href="doctorados.php"]`)
+  link.click()
+})
+
+Cypress.Commands.add("visitDoctoradosDerecho", () => {
+  cy.visitDoctorados()
+  const link = cy.get(`[href="oferta7.php?n=7&p=3"]`)
+  link.click()
 })
