@@ -87,6 +87,7 @@ Cypress.Commands.add("ofertaAcademica", () => {
   ofertaAcademica.click()
 })
 
+
 Cypress.Commands.add("licenciaturas", () => {
   cy.ofertaAcademica()
   const link = cy.get(`[href="licenciaturas.php"]`)
@@ -116,4 +117,11 @@ Cypress.Commands.add("visitOneEspecialidad", () => {
   cy.visitEspecialidades()
   const link = cy.get(`[href="oferta5.php?n=5&p=2"]`)
   link.click()
+})
+
+Cypress.Commands.add("secundaria", () => {
+  cy.visitHome()
+  cy.ofertaAcademica()
+  const secundaria = cy.get(`[href="oferta2.php"]`)
+  secundaria.click()
 })
