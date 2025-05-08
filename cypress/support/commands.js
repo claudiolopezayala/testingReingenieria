@@ -104,6 +104,18 @@ Cypress.Commands.add("prepaSanFrancisco", () => {
   prepaSanFrancisco.click()
 })
 
+Cypress.Commands.add("prepaJuanAlonsoTorres", () => {
+  cy.preparatorias()
+  const prepaJuanAlonsoTorres = cy.get(`[href="oferta3.php?n=43&p=1"]`)
+  prepaJuanAlonsoTorres.click()
+})
+
+Cypress.Commands.add("prepaSalamanca", () => {
+  cy.preparatorias()
+  const prepaSalamanca = cy.get(`[href="oferta3.php?n=23&p=1"]`)
+  prepaSalamanca.click()
+})
+
 Cypress.Commands.add("licenciaturas", () => {
   cy.ofertaAcademica()
   const link = cy.get(`[href="licenciaturas.php"]`)
