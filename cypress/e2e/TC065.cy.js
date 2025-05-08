@@ -1,7 +1,7 @@
-describe("TC064",()=>{
+describe("TC065",()=>{
   it("passes",()=>{
     cy.visitOneEspecialidad()
-    const link = cy.get(`[href="#panel-7"]`)
+    const link = cy.get(`[href="#panel-2"]`)
     link.click()
   })
 })
