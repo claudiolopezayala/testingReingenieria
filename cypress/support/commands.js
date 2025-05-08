@@ -86,3 +86,16 @@ Cypress.Commands.add("ofertaAcademica", () => {
   const ofertaAcademica = cy.get(`div#link3 [href="oferta/"]`)
   ofertaAcademica.click()
 })
+
+Cypress.Commands.add("licenciaturas", () => {
+  cy.ofertaAcademica()
+  const link = cy.get(`[href="licenciaturas.php"]`)
+  link.click()
+})
+
+Cypress.Commands.add("actuaria", () => {
+  cy.licenciaturas()
+  const link = cy.get(`[href="oferta1.php?n=1&p=46"]`)
+  link.click()
+})
+
