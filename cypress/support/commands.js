@@ -55,6 +55,16 @@ Cypress.Commands.add("visitEC",()=>{
   EC.click()
 })
 
+Cypress.Commands.add("visitACT",()=>{
+  cy.visitHome()
+  const ofertaAcademica = cy.get(`div#link3 [href="oferta/"]`)
+  ofertaAcademica.click()
+
+  const ACT = cy.get(`[href="licenciaturas.php"]`)
+  ACT.click()
+  cy.contains('Actuaría').click();
+})
+
 Cypress.Commands.add("vistCertificacion",()=>{
   cy.visitEC()
   const link = cy.get(`[href="oferta9.php?n=9&p=1270"`)
